@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Pepsi transportes</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <style>
+    :root{ --bg:#0a0a0a; --blue:#0b4faa; --white:#f5f7fb; --muted:#c6d3ec }
+    *{box-sizing:border-box} html,body{height:100%}
+    body{
+      margin:0; min-height:100svh; display:flex; flex-direction:column;
+      font-family:Inter,system-ui,Segoe UI,Roboto,Arial,Helvetica,sans-serif;
+      color:var(--white);
+      background: radial-gradient(1000px 600px at 50% -150px, #1b2755 0%, #0b0f1f 30%, var(--bg) 60%) fixed;
+    }
+    main{flex:1} .wrap{width:min(1200px,94%); margin:44px auto 0}
+    h1{ text-align:center; font-weight:800; margin:6px 0; font-size:clamp(28px,4vw,46px) }
+    .subtitle{ text-align:center; color:#dfe6fb; font-weight:800; letter-spacing:.4px; margin:8px 0 0 }
+    .stage{ margin-top:16vh; }
+    .panel{
+      position:relative; background:var(--blue);
+      border-radius:32px; padding:70px 34px 60px;
+      display:grid; grid-template-columns:repeat(4,1fr);
+      gap:clamp(12px,4vw,28px); align-items:center;
+      box-shadow:0 22px 60px rgba(0,0,0,.45), inset 0 0 0 1px rgba(255,255,255,.06);
+    }
+    @media (max-width:980px){ .panel{ grid-template-columns:repeat(2,1fr) } }
+    @media (max-width:520px){ .panel{ grid-template-columns:1fr } }
+    .pepsi-badge{
+      position:absolute; left:50%; top:0; transform:translate(-50%,-50%);
+      width:120px; height:120px; border-radius:999px; overflow:hidden; background:#fff;
+      border:3px solid #f0f0f0; display:grid; place-items:center; box-shadow:0 14px 30px rgba(0,0,0,.45), 0 0 0 6px rgba(9,74,168,.25);
+    }
+    .pepsi-badge img{ width:100%; height:100%; object-fit:cover }
+    .role{
+      text-decoration:none; color:var(--white);
+      display:flex; flex-direction:column; align-items:center; gap:16px;
+      border-radius:22px; padding:28px 16px;
+      background:linear-gradient(180deg, rgba(255,255,255,.08), rgba(255,255,255,.02));
+      border:1px solid rgba(255,255,255,.14);
+      transition:transform .15s ease, box-shadow .15s ease, background .2s ease;
+    }
+    .role:hover{ transform:translateY(-3px); box-shadow:0 12px 24px rgba(0,0,0,.35) }
+    .role img{ width:76px; height:76px; object-fit:contain }
+    .role .label{ font-weight:800; letter-spacing:.2px; font-size:18px }
+    footer{ width:100%; display:flex; justify-content:center; gap:26px; padding:22px 0 26px; color:var(--muted) }
+  </style>
+</head>
+<body>
+  <main>
+    <div class="wrap">
+      <h1>Pepsi transportes</h1>
+      
+
+      <div class="stage">
+        <div class="panel" role="navigation" aria-label="Seleccionar tipo de usuario">
+          <div class="pepsi-badge">
+            <img src="{{ url_for('static', filename='img/logo-pepsi.png') }}" alt="Pepsi">
+          </div>
+
+          <a class="role" href="{{ url_for('login', role='mecanico') }}">
+            <img src="{{ url_for('static', filename='img/mecanico.png') }}" alt="Mecanico"><div class="label">Mecánico</div>
+          </a>
+          <a class="role" href="{{ url_for('login', role='conductor') }}">
+            <img src="{{ url_for('static', filename='img/conductor.png') }}" alt="Conductor"><div class="label">Conductor</div>
+          </a>
+          <a class="role" href="{{ url_for('login', role='administrador') }}">
+            <img src="{{ url_for('static', filename='img/administrador.png') }}" alt="Administrador"><div class="label">Administrador</div>
+          </a>
+          <a class="role" href="{{ url_for('login', role='seguridad') }}">
+            <img src="{{ url_for('static', filename='img/seguridad.png') }}" alt="Seguridad"><div class="label">Seguridad</div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <span> </span>
+  </footer>
+</body>
+</html>
