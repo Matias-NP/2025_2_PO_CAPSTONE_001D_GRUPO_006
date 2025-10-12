@@ -1,0 +1,17 @@
+User Story mapping
+https://miro.com/app/board/uXjVLL4rmGI=/
+
+Daily meating
+https://miro.com/app/board/uXjVJ7_lB0A=/?userEmail=ro.riquelmev@duocuc.cl&track=true&lid=y0t6n6v8zt21
+
+Canvas
+https://www.canva.com/design/DAGzu0i3rm4/v8-RUms1h0_JVwF9pZXBBQ/edit?ui=eyJEIjp7IlAiOnsiQiI6ZmFsc2V9fX0
+
+Jira
+https://duocuc-team-t6clk88g.atlassian.net/jira/software/projects/SCRUM/boards/1/backlog?epics=visible&jql=parent+%3D+SCRUM-17&atlOrigin=eyJpIjoiODg1NGI1OTdmNGViNGY4YWJkZmNiZWI2OTUwZGQxNWUiLCJwIjoiaiJ9
+
+
+Gonzalo Saavedra
+Matias Nuñez
+Rodrigo Riquelme
+
