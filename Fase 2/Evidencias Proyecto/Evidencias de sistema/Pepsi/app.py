@@ -5,7 +5,7 @@ from flask import Flask, render_template, request, redirect, url_for, flash, ses
 from werkzeug.security import check_password_hash
 
 # === Ruta ABSOLUTA a tu base de datos (ajústala si cambias de carpeta) ===
-DB_PATH = r"C:\Users\matia\OneDrive\Escritorio\Pagina pepsi\Pepsi\pepsi.db"
+DB_PATH = r"Fase 2/Evidencias Proyecto/Evidencias de sistema/Pepsi/pepsi.db"
 
 # ------------------ Config básica ------------------
 app = Flask(__name__)
@@ -191,3 +191,4 @@ if __name__ == "__main__":
     if not os.path.exists(DB_PATH):
         print("⚠ No se encontró pepsi.db en:", DB_PATH)
     app.run(debug=True)
+
